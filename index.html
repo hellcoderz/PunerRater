@@ -1,0 +1,82 @@
+<html>
+<head>
+  <title>Puner Rater</title>
+<script src="https://www.stanford.edu/~dco/common/jquery.min.js"></script>
+<script src="https://www.stanford.edu/~dco/common/mmturkey.0.5.js?nowarn"></script>
+<!--<script src="pico/client.js"></script>-->
+<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<p class="title"> Puner Rater </p>
+	<div class="main">
+		<h3>This web app will rate how funny your puns are!</h3>
+
+		<!-- <p>Choose <b>valence</b> to uncover how <span style="color:blue">positive</span> or <span style="color:red">negative</span> the text is.</br>
+		Choose <b>arousal</b> to uncover how <span style="color:blue">excited</span> or <span style="color:red">calm</span> the text is.</br>
+		Choose <b>concreteness</b> to uncover how <span style="color:blue">concrete</span> or <span style="color:red">abstract</span> the text is.</p> -->
+
+		<p> -1 <canvas id="myCanvas" width="270px" height="30px" style="border:0px;">Your browser does not support the HTML5 canvas tag.</canvas> 1 </p>
+
+		<!-- <p>Pick a dimension: -->
+		<!-- <select id="dictionary"> -->
+  			<!-- <option value="polarity">Polarity</option> -->
+  			<!-- <option value="valence">Valence</option> -->
+  			<!-- <option value="arousal">Arousal</option> -->
+  			<!-- <option value="concreteness">Concreteness</option> -->
+		<!-- </select> -->
+		<!-- </p> -->
+
+
+
+		<table border="0" width="800px">
+			<tr>
+				<td width="100%"><p class="labels"> Type your pun here: </p></td>
+				<td width="50%"><p class="labels"> 
+					Output data
+					<!-- Annotated text (average score: <span id="score"> </span>) -->
+				</p></td>
+			</tr>
+			<tr>
+				<td>
+					<form name="text">
+ 						<textarea id="input" form="text" style="width:400px; height:100px; resize: none;">This web app will tell you how punny your puns are!</textarea>
+ 					</form>
+ 					
+ 					<form name="punWord">
+ 						<p style="text-align:center">What is the word that you wanted to pun?
+ 						<textarea id="punWordInput" form="text" style="width:400px; height:30px; text-align: center; resize: none;">punny</textarea>
+ 						</p>
+ 					</form>
+ 					
+ 					<form name="actualWord">
+ 						<p style="text-align:center">What is the actual word?
+ 						<textarea id="actualWordInput" form="text" style="width:400px; height:30px; text-align: center; resize: none;">funny</textarea>
+ 						</p>
+ 					</form>
+ 				</td>
+ 			<td valign="top">
+ 				<table style="border:1px solid gray;" cellpadding="0" width="400px" height="300px">
+ 					<tr>
+ 						<td valign="top">
+ 							<p id="output"></p>
+ 					</td></tr>
+ 				</table>
+ 			</td>
+ 			</tr>
+
+
+
+ 			<tr>
+ 				<td align="right">
+					<p><span id="progressSpan">App is Ready</span></p>
+ 					<button type="button" id="submit" onclick="this.blur(); colorer();">Submit</button>
+ 				</td>
+ 			</tr>
+		</table>
+
+</div>
+</body>
+<!-- <script src="code/colormetext.js"></script> -->
+</html>
