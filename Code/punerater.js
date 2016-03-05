@@ -39,9 +39,11 @@ var allColors = ["darkred", "#800000", "red", "#FF5050", "gray", "#3366FF", "blu
 
 		}
 
-function colorer(){
-	var option = document.getElementById("dictionary").value;
+function ratePun(){
+	//var option = document.getElementById("dictionary").value;
 	var input = document.getElementById("input").value;
+	var homophone1Input = document.getElementById("homophone1Input").value;
+	var homophone2Input = document.getElementById("homophone2Input").value;
 	//pico.load("simplepython");
 	//simplepython.returnColors(input, function(response){
     //	$('#output').html(response);  
@@ -51,7 +53,7 @@ function colorer(){
 		type: "POST",
 	  //crossDomain : true,
 	  url: "code/masterAnnotator.py",
-	  data: { param: input, lexicon: option},
+	  data: { param: input, param2: homophone1Input, param3: homophone2Input},
 	  //data: {'key':'value','key2':'value2'},
 	  success: function(response){
 	  	//alert(response.message);
