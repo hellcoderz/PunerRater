@@ -69,7 +69,13 @@ function ratePun(){
 	  	//alert(response.message);
         //alert(response.keys);
         alert(response.keys);
-        
+
+        alert(response.distinctiveness);
+        alert(response.ambiguity);
+        alert(response.focus1);
+        alert(response.focus2);
+        alert(response.test);
+
         //var lineBreakIndices = findAllIndices(input, 'h');
 
   //       var meanScore = response.mean;

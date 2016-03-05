@@ -85,6 +85,7 @@ result['distinctiveness'] = measures['KL1']
 result['ambiguity'] = measures['entropy']
 result['focus1'] = measures['m1Focus']
 result['focus2'] = measures['m2Focus']
+result['test'] = '1'
 
 
 
