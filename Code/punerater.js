@@ -57,7 +57,8 @@ function ratePun(){
 	  //data: {'key':'value','key2':'value2'},
 	  success: function(response){
 
-	  	var distinctiveness = response.distinctiveness
+	  	var distinctiveness = response.distinctiveness;
+	  	var thisTest = response.test;
 	  	$("#score1").html(distinctiveness);
 	  	$("#score2").html(response.ambiguity);
 	  	
@@ -66,15 +67,17 @@ function ratePun(){
 	  	//response.focus2;
 
 	  	alert("I'm here!");
+	  	alert(distinctiveness);
+        alert(thisTest);
+        
 	  	//alert(response.message);
         //alert(response.keys);
         alert(response.keys);
 
-        alert(distinctiveness);
         alert(response.ambiguity);
         alert(response.focus1);
         alert(response.focus2);
-        alert(response.test);
+        
 
         //var lineBreakIndices = findAllIndices(input, 'h');
 
