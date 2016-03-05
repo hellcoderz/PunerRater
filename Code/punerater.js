@@ -57,8 +57,8 @@ function ratePun(){
 	  //data: {'key':'value','key2':'value2'},
 	  success: function(response){
 
-
-	  	$("#score1").html(response.distinctiveness);
+	  	var distinctiveness = response.distinctiveness
+	  	$("#score1").html(distinctiveness);
 	  	$("#score2").html(response.ambiguity);
 	  	
 	  	
@@ -70,7 +70,7 @@ function ratePun(){
         //alert(response.keys);
         alert(response.keys);
 
-        alert(response.distinctiveness);
+        alert(distinctiveness);
         alert(response.ambiguity);
         alert(response.focus1);
         alert(response.focus2);
