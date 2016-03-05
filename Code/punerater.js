@@ -65,6 +65,7 @@ function ratePun(){
 	  	//response.focus1;
 	  	//response.focus2;
 
+	  	alert("I'm here!");
 	  	//alert(response.message);
         //alert(response.keys);
         //var lineBreakIndices = findAllIndices(input, 'h');
