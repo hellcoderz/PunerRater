@@ -52,27 +52,37 @@ function ratePun(){
 	$.ajax({
 		type: "POST",
 	  //crossDomain : true,
-	  url: "code/masterAnnotator.py",
+	  url: "code/masterPuner.py",
 	  data: { param: input, param2: homophone1Input, param3: homophone2Input},
 	  //data: {'key':'value','key2':'value2'},
 	  success: function(response){
+
+
+	  	$("#score1").html(response.distinctiveness);
+	  	$("#score2").html(response.ambiguity);
+	  	
+	  	
+	  	//response.focus1;
+	  	//response.focus2;
+
 	  	//alert(response.message);
         //alert(response.keys);
         //var lineBreakIndices = findAllIndices(input, 'h');
-        var meanScore = response.mean;
-        $("#score").html(meanScore);
-        var words = input.split(" ");
-		//var colors = o;
-		var colors = response.colors;
-		var coloredWords = [];	
-		for (var i=0; i<words.length; i++) {
-			coloredWords[i] = '<span style="color:' + colors[i] + '">' + words[i] + '</span>';
-		}
+        
+  //       var meanScore = response.mean;
+  //       $("#score").html(meanScore);
+  //       var words = input.split(" ");
+		// //var colors = o;
+		// var colors = response.colors;
+		// var coloredWords = [];	
+		// for (var i=0; i<words.length; i++) {
+		// 	coloredWords[i] = '<span style="color:' + colors[i] + '">' + words[i] + '</span>';
+		// }
 		
-		var coloredStr = "";
-		for (var i=0; i<coloredWords.length; i++) {
-			coloredStr = coloredStr + " " + coloredWords[i];
-		}
+		// var coloredStr = "";
+		// for (var i=0; i<coloredWords.length; i++) {
+		// 	coloredStr = coloredStr + " " + coloredWords[i];
+		// }
 		
 
 
@@ -86,7 +96,7 @@ function ratePun(){
 			coloredStr.insert(thisIndex, '</br>');
 		}
 		*/
-		$("#output").html(coloredStr);
+		// $("#output").html(coloredStr);
 		
 	}
 });
