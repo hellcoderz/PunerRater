@@ -10,24 +10,24 @@ fs = cgi.FieldStorage()
 
 
 
-class SentimentAnnotator():
-	#def __init__(self):
-		#self.anew = pickle.load(open("../pickledData/anew.p", "r"))
+# class SentimentAnnotator():
+# 	#def __init__(self):
+# 		#self.anew = pickle.load(open("../pickledData/anew.p", "r"))
 
-	# This is the function that should be called externally
-	def annotate(self, sentence, model="valence"):
-		words = sentence.split()
-		#if model=="polarity":
-			#values = [self.annotateDiscreteLiu(word.lower().strip()) for word in words]
-		if model=="valence":
-			values = [self.annotateWarrinerValence(word.lower().strip()) for word in words]
-		elif model=="arousal":
-			values = [self.annotateWarrinerArousal(word.lower().strip()) for word in words]
-		elif model=="concreteness":
-			values = [self.annotateConcrete(word.lower().strip()) for word in words]
-		else: # default
-			values = [self.annotateDiscreteLiu(word.lower().strip()) for word in words]
-		return values
+# 	# This is the function that should be called externally
+# 	def annotate(self, sentence, model="valence"):
+# 		words = sentence.split()
+# 		#if model=="polarity":
+# 			#values = [self.annotateDiscreteLiu(word.lower().strip()) for word in words]
+# 		if model=="valence":
+# 			values = [self.annotateWarrinerValence(word.lower().strip()) for word in words]
+# 		elif model=="arousal":
+# 			values = [self.annotateWarrinerArousal(word.lower().strip()) for word in words]
+# 		elif model=="concreteness":
+# 			values = [self.annotateConcrete(word.lower().strip()) for word in words]
+# 		else: # default
+# 			values = [self.annotateDiscreteLiu(word.lower().strip()) for word in words]
+# 		return values
 
 
 def colorPicker(scores):

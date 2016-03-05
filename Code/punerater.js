@@ -59,6 +59,7 @@ function ratePun(){
 
 	  	var distinctiveness = response.distinctiveness;
 	  	var thisTest = response.test;
+	  	var thisSuccess = response.success;
 	  	$("#score1").html(distinctiveness);
 	  	$("#score2").html(response.ambiguity);
 	  	
@@ -69,6 +70,7 @@ function ratePun(){
 	  	alert("I'm here!");
 	  	alert(distinctiveness);
         alert(thisTest);
+        alert(thisSuccess);
         
 	  	//alert(response.message);
         //alert(response.keys);
