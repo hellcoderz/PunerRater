@@ -52,7 +52,7 @@ function ratePun(){
 	$.ajax({
 		type: "POST",
 	  //crossDomain : true,
-	  url: "code/masterPuner.py",
+	  url: "Code/masterPuner.py",
 	  data: { param: input, param2: homophone1Input, param3: homophone2Input},
 	  //data: {'key':'value','key2':'value2'},
 	  success: function(response){
@@ -68,7 +68,7 @@ function ratePun(){
 	  	//alert(response.message);
         //alert(response.keys);
         //var lineBreakIndices = findAllIndices(input, 'h');
-        
+
   //       var meanScore = response.mean;
   //       $("#score").html(meanScore);
   //       var words = input.split(" ");
