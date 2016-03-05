@@ -1,18 +1,19 @@
 <html>
 <head>
-  <title>Puner Rater</title>
+  <title>Punerater</title>
 <script src="https://www.stanford.edu/~dco/common/jquery.min.js"></script>
 <script src="https://www.stanford.edu/~dco/common/mmturkey.0.5.js?nowarn"></script>
 <!--<script src="pico/client.js"></script>-->
-<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-	<p class="title"> Puner Rater </p>
-	<div class="main">
-		<h3>This web app will rate how funny your puns are!</h3>
+	<p class="title"> Punerater </p>
+	<h3 align="center">Think you're punny?</h3>
 
+	<div class="main">
+		
 		<!-- <p>Choose <b>valence</b> to uncover how <span style="color:blue">positive</span> or <span style="color:red">negative</span> the text is.</br>
 		Choose <b>arousal</b> to uncover how <span style="color:blue">excited</span> or <span style="color:red">calm</span> the text is.</br>
 		Choose <b>concreteness</b> to uncover how <span style="color:blue">concrete</span> or <span style="color:red">abstract</span> the text is.</p> -->
@@ -32,7 +33,7 @@
 
 		<table border="0" width="800px">
 			<tr>
-				<td width="100%"><p class="labels"> Type your pun here: </p></td>
+				<td width="100%"><p class="labels"></p></td>
 				<td width="50%"><p class="labels"> 
 					Output data
 					<!-- Annotated text (average score: <span id="score"> </span>) -->
@@ -41,17 +42,18 @@
 			<tr>
 				<td>
 					<form name="text">
- 						<textarea id="input" form="text" style="width:400px; height:100px; resize: none;">This web app will tell you how punny your puns are!</textarea>
+						<p style="text-align:center">Type your pun here.</p>
+ 						<textarea id="input" form="text" style="width:400px; height:100px; resize: none;">A lettuce will Romaine a lettuce.</textarea>
  					</form>
  					
  					<form name="punWord">
- 						<p style="text-align:center">What is the word that you wanted to pun?
+ 						<p style="text-align:center">Homophone1
  						<textarea id="punWordInput" form="text" style="width:400px; height:30px; text-align: center; resize: none;">punny</textarea>
  						</p>
  					</form>
  					
  					<form name="actualWord">
- 						<p style="text-align:center">What is the actual word?
+ 						<p style="text-align:center">Homophone2
  						<textarea id="actualWordInput" form="text" style="width:400px; height:30px; text-align: center; resize: none;">funny</textarea>
  						</p>
  					</form>
@@ -70,7 +72,7 @@
 
  			<tr>
  				<td align="right">
-					<p><span id="progressSpan">App is Ready</span></p>
+					<p><span id="progressSpan">Ready?</span></p>
  					<button type="button" id="submit" onclick="this.blur(); colorer();">Submit</button>
  				</td>
  			</tr>
@@ -78,5 +80,5 @@
 
 </div>
 </body>
-<!-- <script src="code/colormetext.js"></script> -->
+<script src="code/punerater.js"></script>
 </html>
