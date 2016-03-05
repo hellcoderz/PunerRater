@@ -68,6 +68,8 @@ function ratePun(){
 	  	alert("I'm here!");
 	  	//alert(response.message);
         //alert(response.keys);
+        alert(response.keys);
+        
         //var lineBreakIndices = findAllIndices(input, 'h');
 
   //       var meanScore = response.mean;
