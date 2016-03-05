@@ -1,9 +1,9 @@
 import sys, re, string, math, itertools
 #import nltk
 import pickle 
-#from nltk.tokenize import RegexpTokenizer
-#from nltk.corpus import stopwords
-#from nltk.corpus import wordnet
+from nltk.tokenize import RegexpTokenizer
+from nltk.corpus import stopwords
+from nltk.corpus import wordnet
 from gensim.models import Word2Vec
 
 #unigramF = open("../Lexicons/google_1grams.txt", "r")
@@ -64,9 +64,11 @@ def processSentence(sentence, homophone, alternative, metric="wordnet"):
 	alternativeProb = getUnigram(alternative)
 	print "Computing measures..."
 	measures = computeMeasures(wordInfoDict, homophoneProb, alternativeProb)	
-	distinct = measures["KL1"]
-	ambiguity = measures["entropy"]
-	focus1 = measures["m1Focus"]
+	return measures
+	#distinct = measures["KL1"]
+	#ambiguity = measures["entropy"]
+	#focus1 = measures["m1Focus"]
+	#focus2 = measures["m2Focus"]
 
 
 def computeMeasures(wordInfoDict, m1Prob, m2Prob):
@@ -153,7 +155,7 @@ def computeMeasures(wordInfoDict, m1Prob, m2Prob):
 	measures["KL2"] = KL2
 	measures["entropy"] = entropy
 	measures["m1Focus"] = maxM1FocusWords
-	measures["m1Focus"] = maxM2FocusWords
+	measures["m2Focus"] = maxM2FocusWords
    	return measures
 
 
@@ -235,8 +237,9 @@ def normListSumTo(L, sumTo=1):
 
 #print findHomophone("hare")
 #print getWord2VecMetric("apple", "cat")
-#print processSentence("The dog chased the cat and the cow followed the pig", "animal", "food")
-#print processSentence("The dog ate the apple and the cat drank the milk", "animal", "food")
+print processSentence("The dog chased the cat and the cow followed the pig", "animal", "food")
+print processSentence("The dog ate the apple and the cat drank the milk", "animal", "food")
+print processSentence("The dentist needs to tell the patient the whole tooth", "tooth", "truth")
 #print processSentence("The dog ate the apple and the cat drank the milk", "animal", "food", "word2vec")
 #print processSentence("The cat sat on the mat and the hare sat on the table", "dog", "chair")
 #print processSentence("The magician was so mad he pulled his hare out", "hare", "hair")
